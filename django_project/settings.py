@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECRET_KEY = 'django-insecure-qwnjm7*%a%^lufbfsa1p7li+v35a)veh*57pe6f@_y_!bgq2#@'
 SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = (os.environ.get('DEBUG_VALUE') == "True")
 # DEBUG = os.environ.get('DEBUG')
 
 ALLOWED_HOSTS = ['djangogiron.herokuapp.com']
